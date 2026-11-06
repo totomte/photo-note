@@ -160,9 +160,9 @@ class MainActivity : Activity() {
         val ts = titlePaint.textSize * 1.25f
         val ws = wherePaint.textSize * 1.4f
         val ss = storyPaint.textSize * 1.45f
-        var h = 2 * margin
-        if (titleLines.isNotEmpty()) h += (titleLines.size * ts + 40).toInt()
-        if (whereLines.isNotEmpty()) h += (whereLines.size * ws + 40).toInt()
+        var h = (2 * margin).toInt()
+        if (titleLines.isNotEmpty()) h += (titleLines.size * ts).toInt() + 40
+        if (whereLines.isNotEmpty()) h += (whereLines.size * ws).toInt() + 40
         if (storyLines.isNotEmpty()) h += (storyLines.size * ss).toInt()
         h = (h * 1.05f).toInt()
 
