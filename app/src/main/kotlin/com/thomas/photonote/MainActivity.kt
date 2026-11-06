@@ -18,6 +18,8 @@ import android.widget.ScrollView
 import android.widget.Toast
 
 class MainActivity : Activity() {
+    private lateinit var edit: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,7 +35,7 @@ class MainActivity : Activity() {
             setPadding(0, 0, 0, pad)
         })
 
-        val edit = EditText(this).apply {
+        edit = EditText(this).apply {
             hint = "Caption text…"
             minLines = 6
             maxLines = 10
